@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="githubAuth">
 
 	<head>
 
@@ -15,7 +15,7 @@
 		<script src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
 	</head>
 
-	<body>
+	<body ng-controller="AuthLogic">
 
 		<header>
 			<div class="wrapper">
@@ -30,23 +30,7 @@
 		<div class="cf">&nbsp;</div>
 
 		<section>
-			<div class="wrapper">
-
-				<form action="get" method="something">
-
-					<div class="input">
-						<input ng-model="Email" type="text" name="email" placeholder="Full Sail Email" />
-						<div class="validate fail">Whoops!</div>
-						<div class="validate pass">Hooray!</div>
-					</div>
-
-					<div class="input">
-					<a class="signUp" href="#" onclick="fire();">Sign me up!</a>
-					</div>
-
-				</form>
-
-			</div>
+				<div class="wrapper" ng-view></div>
 		</section>
 
 		<div class="cf">&nbsp;</div>
