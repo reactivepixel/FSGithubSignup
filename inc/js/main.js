@@ -6,6 +6,7 @@ var auth = new FirebaseSimpleLogin(fb, function(error, user) {
   } else if (user) {
     // user authenticated with Firebase
     console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+    fb.push({email:'force', githubID: user.id});
   } else {
     // user is logged out
   }
